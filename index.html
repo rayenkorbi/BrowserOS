@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="navbar">
-        <div class="icon">
+        <div class="icon" onclick="toggleMenu()">
             <img src="images/home-bt.png" alt="Home" class="home">
+            <div class="menu" id="Menu">
+                <a href="#">Programs</a>
+                <a href="#">Documents</a>
+                <a href="#">Settings</a>
+                <a href="#">Log Off</a>
+                <a href="#">Shut Down</a>
+            </div>
         </div>
-        <div class="icon">Files</div>
-        <div class="icon">Settings</div>
+        <div class="icon">#</div>
+        <div class="icon">#</div>
     </div>
 </body>
+<script src="script.js"></script>
+
 </html>
