@@ -1,3 +1,4 @@
+/* body and htmlCSS */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,6 +7,8 @@ html, body {
     background-image: url('/images/background.jpg');
     background-size: cover;
 }
+
+/* Navbar CSS */
 .navbar {
     position: fixed;
     bottom: 0;
@@ -35,6 +38,7 @@ html, body {
     height: 70%;
 }
 
+/* Menu CSS */
 .menu {
     display: none;
     position: absolute;
@@ -58,4 +62,69 @@ html, body {
 
 .menu a:hover {
     background-color: #888;
+}
+
+
+/* Softwares CSS */
+.softwares {
+    position: fixed; 
+    left: 0;
+    top: 0; 
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.softwares .software {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; 
+    height: 100px; 
+    cursor: pointer;
+}
+
+.softwares .software img {
+    width: 50px; 
+    height: auto; 
+}
+.softwares .software p {
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Popup CSS */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 20px;
+    z-index: 1000; 
+    overflow: hidden;
+    width: 700px;
+    height: 500px;
+}
+
+.softwares .software .popup img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+.software:hover .popup {
+    border: 1px solid #888;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
