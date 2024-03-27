@@ -1,11 +1,14 @@
 /* body and htmlCSS */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     background-image: url('/images/background.jpg');
     background-size: cover;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Navbar CSS */
@@ -13,7 +16,7 @@ html, body {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100vw; 
+    width: 100vw;
     background-color: #444;
     color: white;
     display: flex;
@@ -21,6 +24,7 @@ html, body {
     align-items: center;
     padding: 10px 0;
 }
+
 .navbar .icon {
     position: relative;
     width: 40px;
@@ -44,12 +48,12 @@ html, body {
     position: absolute;
     bottom: 100%;
     left: 0;
-    transform: translateY(-7%); 
+    transform: translateY(-7%);
     background-color: #444;
     border: 1px solid #ffffff;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
     padding: 5px 0;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .menu a {
@@ -67,9 +71,9 @@ html, body {
 
 /* Softwares CSS */
 .softwares {
-    position: fixed; 
+    position: fixed;
     left: 0;
-    top: 0; 
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: left;
@@ -79,15 +83,16 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100px; 
-    height: 100px; 
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
 
 .softwares .software img {
-    width: 50px; 
-    height: auto; 
+    width: 50px;
+    height: auto;
 }
+
 .softwares .software p {
     color: #fff;
     font-size: 14px;
@@ -104,17 +109,24 @@ html, body {
     border: 1px solid #ccc;
     background-color: white;
     padding: 20px;
-    z-index: 1000; 
+    z-index: 1000;
     overflow: hidden;
     width: 700px;
     height: 500px;
 }
 
 .softwares .software .popup img {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 20px auto; 
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.softwares .software .popup .games {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
 }
 
 .software:hover .popup {
@@ -127,4 +139,58 @@ html, body {
     right: 10px;
     cursor: pointer;
     font-size: 20px;
+}
+
+
+.softwares .software .popup table {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.softwares .software .popup td {
+    vertical-align: middle;
+}
+
+
+/* Right Click CSS */
+#rightClick {
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background-color: #444;
+    border: 1px solid #888;
+    border-radius: 10px 5px 5px 5px;
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+#rightClick.active {
+    transform: scale(1);
+    transition: transform 100ms ease-in-out;
+}
+
+#rightClick .item {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #eee;
+    line-height: 2px;
+}
+
+#rightClick .item:hover {
+    background-color: #888;
+}
+
+#rightClick .item img {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+}
+
+#rightClick hr {
+    margin: 2px 0px;
+    border-color: #888;
 }
