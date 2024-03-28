@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.file-explorer {
+    display: flex;
+    height: 100%;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar ul li {
+    padding-left: 30px; 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 18px 18px; 
+    cursor: pointer;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.desktop {
+    background-image: url('images/desktop.png');
+}
+
+.documents {
+    background-image: url('images/documents.png');
+}
+
+.downloads {
+    background-image: url('images/downloads.png');
+}
+
+.pictures {
+    background-image: url('images/images.png');
+}
+.thispc {
+    background-image: url('images/thispc.png');
+}
+.network {
+    background-image: url('images/network.png');
+}
+
+
+
+.sidebar ul li:hover {
+    background-color: #ddd;
+}
+
+#iframeResize {
+    width: 100%;
+    height: 100vh; 
+    border: none;
+}
