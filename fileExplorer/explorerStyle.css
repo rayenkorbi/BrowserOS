@@ -1,14 +1,17 @@
+/*Body and HTML styling*/
 body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/*Explorer styling*/
 .file-explorer {
     display: flex;
     height: 100%;
 }
 
+/*Sidebar styling*/
 .sidebar {
     width: 200px;
     background-color: #f0f0f0;
@@ -20,11 +23,7 @@ body, html {
     padding: 0;
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
+
 
 .sidebar ul li {
     padding-left: 30px; 
@@ -35,6 +34,7 @@ body, html {
     list-style-type: none;
     margin-bottom: 20px;
 }
+
 .desktop {
     background-image: url('images/desktop.png');
 }
@@ -63,8 +63,25 @@ body, html {
     background-color: #ddd;
 }
 
+/*Main content styling*/
 #iframeResize {
     width: 100%;
     height: 100vh; 
+    border: none;
+}
+
+.main-content {
+    position: relative; 
+    flex-grow: 1;
+    padding: 20px; 
+    overflow-y: auto; 
+}
+
+.iframeResize {
+    width: 100%; 
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
     border: none;
 }

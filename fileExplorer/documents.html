@@ -6,7 +6,75 @@
     <title>Documents</title>
 </head>
 <body>
-    <h1>Documents</h1>
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        }
+        
+        .documents-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+            height: 90%;
+        }
+        
+        .icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .icon img {
+            width: 80px; 
+            height: 80px; 
+        }
+        
+        .icon span {
+            margin-top: 5px;
+            text-align: center;
+            color: #333;
+        }
+        </style>
+        <div class="documents-container">
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Blender</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Classroom</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Photoshop</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Projects</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Windows</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Homework</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Games Data</span>
+            </div>
+            <div class="icon" data-folder="documents">
+                <img src="images/files.png" alt="files">
+                <span>Ai</span>
+            </div>
+        </div>
 </body>
 </html>
 

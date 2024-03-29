@@ -6,7 +6,59 @@
     <title>Desktop</title>
 </head>
 <body>
-    <h1>Desktop</h1>
+    <style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    }
+    
+    .desktop-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 20px;
+        height: 90%;
+    }
+    
+    .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    .icon img {
+        width: 80px; 
+        height: 80px; 
+    }
+    
+    .icon span {
+        margin-top: 5px;
+        text-align: center;
+        color: #333;
+    }
+    </style>
+    <div class="desktop-container">
+        <div class="icon" data-folder="documents">
+            <img src="images/google.png" alt="google">
+            <span>Google</span>
+        </div>
+        <div class="icon" data-folder="pictures">
+            <img src="images/settings.png" alt="settings">
+            <span>Settings</span>
+        </div>
+        <div class="icon" data-folder="pictures">
+            <img src="images/gamesFolder.png" alt="game">
+            <span>Games</span>
+        </div>
+        <div class="icon" data-folder="pictures">
+            <img src="images/aina.jpg" alt="aina">
+            <span>Creator</span>
+        </div>
+    </div>
 </body>
 </html>
 
