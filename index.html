@@ -9,10 +9,12 @@
 </head>
 
 <body>
+    <!-- Desktop -->
     <div class="softwares">
         <table>
             <tr>
                 <td>
+                    <!-- Google -->
                     <div class="software">
                         <img src="images/google.png" alt="Google">
                         <p>Google</p>
@@ -31,22 +33,45 @@
             </tr>
             <tr>
                 <td>
+                    <!-- Settings -->
                     <div class="software">
                         <img src="images/settings.png" alt="Settings">
                         <p>Settings</p>
+                        <div class="popup">
+                            <iframe src="settings.html" class="iframeResize" title="Iframe Example"></iframe>
+                            <span class="close-btn">
+                                <img src="images/close.png" alt="Close" style="
+                                    width: 20px; 
+                                    height: auto; 
+                                    padding-bottom: 10px;
+                                ">
+                            </span>
+                        </div>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <!-- Files -->
                     <div class="software">
                         <img src="images/files.png" alt="Files">
                         <p>Files</p>
+                        <div class="popup">
+                            <iframe src="fileExplorer/fileExplorer-main.html" class="iframeResize" title="Iframe Example"></iframe>
+                            <span class="close-btn">
+                                <img src="images/close.png" alt="Close" style="
+                                    width: 20px; 
+                                    height: auto; 
+                                    padding-bottom: 10px;
+                                ">
+                            </span>
+                        </div>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <!-- Games -->
                     <div class="software">
                         <img src="images/gamesFolder.png" alt="Games">
                         <p>Games</p>
@@ -95,22 +120,40 @@
                                     </td>
                                 </tr>
                             </table>
-                            <span class="close-btn">&times;</span>
+                            <span class="close-btn">
+                                <img src="images/close.png" alt="Close" style="
+                                    width: 20px; 
+                                    height: auto; 
+                                    padding-bottom: 10px;
+                                ">
+                            </span>
                         </div>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
+                    <!-- Me -->
                     <div class="software">
                         <img src="images/aina.jpg" alt="Creator">
                         <p>Creator</p>
+                        <div class="popup">
+                            <iframe src="aboutMe.html" class="iframeResize" title="Iframe Example"></iframe>
+                            <span class="close-btn">
+                                <img src="images/close.png" alt="Close" style="
+                                    width: 20px; 
+                                    height: auto; 
+                                    padding-bottom: 10px;
+                                ">
+                            </span>
+                        </div>
                     </div>
                 </td>
             </tr>
         </table>
     </div>
     <div class="navbar">
+        <!-- Home Icon -->
         <div class="icon" onclick="toggleMenu()">
             <img src="images/home-bt.png" alt="Home" class="home">
             <div class="menu" id="Menu">
@@ -121,9 +164,17 @@
                 <a href="#">Shut Down</a>
             </div>
         </div>
+
+        <!-- Icons in the Navigation bar -->
         <div class="icon">#</div>
         <div class="icon">#</div>
+
+        <!-- Date And Time in the Navigation bar -->
+        <div class="datetime" id="datetime"></div>
     </div>
+
+
+    <!-- Right Click Menu -->
     <div id="rightClick">
         <div class="item">
             <img src="images/copy.png" alt="Copy">

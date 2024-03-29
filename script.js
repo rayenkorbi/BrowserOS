@@ -66,3 +66,25 @@ document.addEventListener("click", function (event) {
     }
 });
 
+
+/*Date and Time*/
+function updateDateTime() {
+    const now = new Date();
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let timeString = `${hours}:${minutes}`;
+
+    let day = now.getDate().toString().padStart(2, '0');
+    let month = (now.getMonth() + 1).toString().padStart(2, '0'); 
+    let year = now.getFullYear();
+    let dateString = `${day}/${month}/${year}`;
+
+    // Combine both time and date, separated by a line break
+    document.getElementById('datetime').innerHTML = `${timeString}<br>${dateString}`;
+}
+
+// Update date and time every second
+setInterval(updateDateTime, 1000);
+
+// Initialize on page load
+updateDateTime();

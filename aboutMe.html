@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .popup img {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        transition: filter 0.3s;
+    }
+
+    .popup img:hover {
+        filter: blur(0);
+        width: 160px;
+        height: 160px;
+    }
+
+    .popup img:not(:hover) {
+        filter: blur(1px); 
+    }
+    </style>
+    <div class="popup">
+        <a href="https://www.linkedin.com/in/rayen-korbi-4ab072240/"><img src="images/linkedin.png" alt="Icon 1"></a>
+        <a href="https://github.com/rayenkorbi"><img src="images/github.png" alt="Icon 2"></a>
+        <a href="https://www.youtube.com/channel/UC5UO98ECiJVQmdvqSmNLlWg"><img src="images/youtube.png" alt="Icon 4"></a>
+        <a href="https://sites.google.com/view/rayenkorbi/home?authuser=3"><img src="images/website.png" alt="Icon 3"></a>
+    </div>
+</body>
+</html>
+
+
