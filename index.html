@@ -7,7 +7,46 @@
     <title>Home - OS</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    //aw aina
+    document.addEventListener('DOMContentLoaded', function () {
+    var softwareIcons = document.querySelectorAll('.software');
 
+    softwareIcons.forEach(function (icon) {
+        icon.addEventListener('click', function () {
+            document.querySelectorAll('.popup').forEach(function (popup) {
+                popup.style.display = 'none';
+            });
+            this.querySelector('.popup').style.display = 'block'; //aw kima react
+        });
+
+        var gameImages = icon.querySelectorAll('.games');
+        gameImages.forEach(function (gameImage) {
+            gameImage.addEventListener('click', function () {
+                var iframeSrc = this.getAttribute('data-src');
+                if (iframeSrc) {
+                    var iframe = document.createElement('iframe');
+                    iframe.src = iframeSrc;
+                    iframe.style.width = "100%";
+                    iframe.style.height = "100%";
+                    icon.querySelector('.popup').innerHTML = ""; //aw innerHTML en force
+                    icon.querySelector('.popup').appendChild(iframe);
+                    icon.querySelector('.popup').style.display = 'block';
+                }
+            });
+        });
+    });
+
+    var closeButtons = document.querySelectorAll('.close-btn');
+    closeButtons.forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            this.parentElement.style.display = 'none';
+        });
+    });
+});
+
+</script>
 <body>
     <!-- Desktop -->
     <div class="softwares">
@@ -79,13 +118,13 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <img class="games" src="images/minesweeper.png" alt="Minesweeper">
+                                        <img class="games" src="images/minesweeper.png" alt="Minesweeper" data-src="https://minesweeper.online/game/3263696326">
                                         <center>
                                             <p>Minesweeper</p>
                                         </center>
                                     </td>
                                     <td>
-                                        <img class="games" src="images/snake.png" alt="Snake">
+                                        <img class="games" src="images/snake.png" alt="Snake" data-src="https://snake.io">
                                         <center>
                                             <p>Snake</p>
                                         </center>
@@ -93,13 +132,13 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="games" src="images/dino.png" alt="Dino">
+                                        <img class="games" src="images/dino.png" alt="Dino" data-src="https://chromedino.com">
                                         <center>
                                             <p>Dino</p>
                                         </center>
                                     </td>
                                     <td>
-                                        <img class="games" src="images/paint.png" alt="Paint">
+                                        <img class="games" src="images/paint.png" alt="Paint" data-src="https://www.tate.org.uk/kids/games-quizzes/tate-paint">
                                         <center>
                                             <p>Paint</p>
                                         </center>
@@ -107,13 +146,13 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img class="games" src="images/zero.png" alt="zero">
+                                        <img class="games" src="images/zero.png" alt="zero" data-src="#tha3 ma tayasara mina anachwet">
                                         <center>
                                             <p>Empty</p>
                                         </center>
                                     </td>
                                     <td>
-                                        <img class="games" src="images/zero.png" alt="zero">
+                                        <img class="games" src="images/zero.png" alt="zero" data-src="">
                                         <center>
                                             <p>Empty</p>
                                         </center>
@@ -129,10 +168,7 @@
                             </span>
                         </div>
                     </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
+                    
                     <!-- Me -->
                     <div class="software">
                         <img src="images/aina.jpg" alt="Creator">
@@ -205,5 +241,6 @@
     </div>
 </body>
 <script src="script.js"></script>
+
 
 </html>
