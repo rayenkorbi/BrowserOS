@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "electron": "^29.3.0"
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.0.0"
   }
 }
